@@ -3,7 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-width=1.0">
-    <meta name="description" content="Gestoria integral en CABA y PBA: automotor, multas, registros, habilitaciones y tramites administrativos. Atencion profesional en Maipu 2279, Olivos.">
+    <meta name="description" content="Gestoria integral en CABA y PBA: transferencias, patentamientos, informes, multas y habilitaciones. Atencion profesional en Maipu 2279, Olivos.">
+    <meta name="keywords" content="gestoria en olivos, gestoria caba, gestoria pba, transferencias automotor, patentamientos, libre deuda, multas caba, multas pba, habilitaciones comerciales">
+    <meta name="author" content="Gestoria De Simone">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#122239">
+    <meta name="geo.region" content="AR-B">
+    <meta name="geo.placename" content="Olivos, Buenos Aires">
+    <meta name="geo.position" content="-34.48139;-58.48657">
+    <meta name="ICBM" content="-34.48139, -58.48657">
+
+    <!-- Update this URL when the final domain is defined -->
+    <link rel="canonical" href="https://desimone.netlify.app/">
+
+    <meta property="og:locale" content="es_AR">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Gestoria De Simone">
+    <meta property="og:title" content="Gestoria De Simone | Gestoria Integral en CABA y PBA">
+    <meta property="og:description" content="Tramites automotores, administrativos y comerciales con seguimiento profesional. Maipu 2279, Olivos.">
+    <meta property="og:url" content="https://desimone.netlify.app/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&h=630&q=80">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Gestoria De Simone - Tramites en CABA y PBA">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gestoria De Simone | Gestoria Integral en CABA y PBA">
+    <meta name="twitter:description" content="Tramites automotores, administrativos y comerciales con gestion profesional en CABA y PBA.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&h=630&q=80">
+
     <title>Gestoria De Simone | Gestoria Integral en CABA y PBA</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -11,6 +39,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Gestoria De Simone",
+            "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&h=630&q=80",
+            "url": "https://desimone.netlify.app/",
+            "telephone": "+54-11-6003-0783",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Maipu 2279",
+                "addressLocality": "Olivos",
+                "addressRegion": "Buenos Aires",
+                "postalCode": "B1636",
+                "addressCountry": "AR"
+            },
+            "areaServed": ["CABA", "Provincia de Buenos Aires"],
+            "priceRange": "$$",
+            "sameAs": [
+                "https://wa.me/5491160030783"
+            ]
+        }
+    </script>
 </head>
 <body>
 
@@ -180,6 +231,33 @@
         </div>
     </section>
 
+    <section id="resenas" class="reviews">
+        <div class="reviews-shell" data-aos="fade-up">
+            <h2 class="section-title">Resenas verificadas</h2>
+            <p class="section-subtitle">Nuestros Clientes</p>
+
+            <div class="reviews-placeholder" data-aos="fade-up" data-aos-delay="100">
+                <div class="reviews-badge">Opiniones de Google</div>
+                <div class="reviews-widget" aria-label="Widget de resenas de Google">
+                    <div class="sk-ww-google-reviews" data-embed-id="25665885"></div>
+                </div>
+                <div class="reviews-fallback" id="reviewsFallback" aria-live="polite">
+                    <h3>No pudimos cargar las resenas en este momento</h3>
+                    <p>Podes verlas directamente en Google Maps para validar opiniones reales y actualizadas.</p>
+                    <a class="reviews-fallback-link" href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir resenas en Google Maps
+                    </a>
+                </div>
+            </div>
+
+            <a class="reviews-link" href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-star"></i> Ver perfil y reseñas en Google Maps
+            </a>
+        </div>
+    </section>
+
+    <script src="https://widgets.sociablekit.com/google-reviews/widget.js" defer></script>
+
     <section id="contacto" class="contact">
         <h2 class="section-title" data-aos="fade-up">Coordinemos tu tramite</h2>
         <p class="section-subtitle" data-aos="fade-up" data-aos-delay="80">Contanos tu caso y te respondemos con requisitos, costo estimado y tiempo de resolucion.</p>
@@ -229,6 +307,22 @@
         const contactForm = document.getElementById('contactForm');
         const submitBtn = document.getElementById('submitBtn');
         const successMessage = document.getElementById('successMessage');
+        const reviewsRoot = document.querySelector('.sk-ww-google-reviews');
+        const reviewsWidget = document.querySelector('.reviews-widget');
+        const reviewsFallback = document.getElementById('reviewsFallback');
+
+        // Fallback: si el widget no carga, mostramos alternativa segura
+        setTimeout(() => {
+            const widgetLoaded = reviewsRoot && (
+                reviewsRoot.querySelector('iframe') ||
+                reviewsRoot.children.length > 0
+            );
+
+            if (!widgetLoaded && reviewsWidget && reviewsFallback) {
+                reviewsWidget.classList.add('is-hidden');
+                reviewsFallback.classList.add('show');
+            }
+        }, 3500);
 
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
