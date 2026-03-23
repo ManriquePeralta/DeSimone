@@ -298,7 +298,8 @@
     <script>
         AOS.init({
             duration: 900,
-            once: true,
+            once: false,
+            mirror: true,
             offset: 60,
             easing: "ease-out-cubic"
         });
@@ -335,14 +336,15 @@
             const tramite = contactForm.elements.tramite.value.trim();
             const detalle = contactForm.elements.detalle.value.trim();
 
-            const message = encodeURIComponent(
-                'Hola, quiero coordinar un tramite.%0A%0A' +
-                'Nombre: ' + nombre + '%0A' +
-                'Telefono: ' + telefono + '%0A' +
-                'Email: ' + email + '%0A' +
-                'Tramite: ' + tramite + '%0A%0A' +
-                'Detalle:%0A' + detalle
-            );
+            const rawMessage =
+                'Hola, quiero coordinar un tramite.\n\n' +
+                'Nombre: ' + nombre + '\n' +
+                'Telefono: ' + telefono + '\n' +
+                'Email: ' + email + '\n' +
+                'Tramite: ' + tramite + '\n\n' +
+                'Detalle:\n' + detalle;
+
+            const message = encodeURIComponent(rawMessage);
 
             window.open('https://wa.me/5491160030783?text=' + message, '_blank');
 
